@@ -8,13 +8,13 @@ pipeline {
         }
         stage('Test') { 
             steps {
-               sh ''' test.py
+               sh ''' python3 test.py
                 '''
             }
         }
         stage('Deploy') { 
             steps {
-              sh ''' hello.py
+              sh ''' python3 hello.py
                 '''
             }
         }
