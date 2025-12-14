@@ -3,22 +3,22 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                echo "hello1"
+                sh ''' python3 test.py
+               '''
             }
         }
         stage('Test') { 
             steps {
-               sh ''' python3 test.py
-                '''
+               echo "hello2"
             }
         }
         stage('Deploy') { 
             steps {
-              sh ''' python3 hello.py
-                '''
+              
+                sh ''' python3 hello.py
+               '''
+
             }
         }
     }
 }
-
-
